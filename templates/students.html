@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>Teacher Management Application</title>
+	
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+	
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+	
+</head>
+ 
+<body>
+    <button type="button" onclick="window.location.href='/'"> Home </a>
+    </button>
+    <h5>Student Information List</h5>
+    <table>
+     <tr>
+        <th>ID</th>
+        <th>Student Username </th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Role</th>
+        <th>Birthday</th>
+     </tr>
+    {% for x in student %}
+     <tr>
+        <th>{{ x.stid }}</th>
+        <th>{{ x.stusername }}</th>
+        <th>{{ x.stname }}</th>
+        <th>{{ x.stsurname }}</th>
+        <th>{{ x.strole }}</th>
+        <th>{{ x.stbday }}</th>
+     </tr>
+    {% endfor %}
+    </table>
+    <button type="button" onclick="window.location.href='studentadd'"> Add A Student </a>
+    </button>
+    <button type="button" onclick="window.location.href='studentup'"> Update Catalogue </a>
+    </button>
+    <button type="button" onclick="window.location.href='studentde'"> Delete A Student </a>
+    </button>
+</body>
+
+</html>

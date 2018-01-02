@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Python Flask Bucket List App</title>
+ 
+    
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/signup.css') }}">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	
+
+  </head>
+ 
+  <body>
+ 
+
+   
+     
+      <div class="jumbotron" style="background-color:#890115">
+       <button type="button" onclick="window.location.href='/'"> Home </a>
+        </button>
+        <h4>Login Page</h4>
+        <p>Please use your valid credentials to proceed further to the application:</p>
+         <form action="/login" method="POST">
+         <input type="username" name="inputUsername" placeholder="username">
+         <input type="password" name="inputPassword" placeholder="password">
+        <input type="submit"  value="log in">
+      </form>
+      </div>
+ 
+       
+ 
+      <footer class="footer">
+        <p>&copy; Created And Developed by Vasileios Kazakos</p>
+      </footer>
+ 
+    </div>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+body {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color:#8203bc
+}
+ 
+ button{
+    position:relative;
+	top:10px;
+    background-color:black;
+	color:red;
+ }
+ 
+ .footer{
+	color:gold;
+	position:relative;
+	left:950px;
+}
+
+.jumbotron1{
+	background-color:#0076ad;
+	color:white;
+    border:1px solid white;
+}
+ 
+ button:hover{
+	background-color:#05ff86;
+	color:#6501a8;
+}
+
+input[type=username] {
+    padding:5px; 
+    display:block;
+}
+
+input[type=password] {
+    padding:5px; 
+    display:block;
+}
+input[type=submit] {
+    background-color:black;
+    color:red;
+    position:relative;
+    top:20px;
+}
+h1{
+    text-align:center;
+}
+h4{
+    text-align:center;
+    color:gold;
+    position:relative;
+    bottom:70px;
+    border:2px solid black;
+    background-color:purple;
+} 
+ h3{
+    text-align:center;
+    border:2px solid white;
+	background-color:black;
+    color:red;
+    position:relative;
+    top:10px;
+ }
+ 
+ p{
+    color:gold;
+    border:2px solid white;
+	background-color:black;
+   }
+ 
+.btn-block{
+    background-color:black;
+    color:red;
+}
+
+.btn-block:hover{
+    background-color:#be05c4;
+    color:#0639d3;
+}
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}

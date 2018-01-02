@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>Teacher Management Application</title>
+	
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+	
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+	
+</head>
+ 
+<body>
+    <button type="button" onclick="window.location.href='/'"> Home </a>
+    </button>
+    <h5>Student Information List</h5>
+    <table>
+     <tr>
+        <th>Project Code</th>
+        <th>Project Name </th>
+        <th>Submission Date</th>
+        <th>Description</th>
+        <th>Subject Code</th>
+     </tr>
+    {% for x in project %}
+     <tr>
+        <th>{{ x.prcode }}</th>
+        <th>{{ x.prtitle }}</th>
+        <th>{{ x.prsubdate }}</th>
+        <th>{{ x.prdesc }}</th>
+        <th>{{ x.subcode }}</th>
+     </tr>
+    {% endfor %}
+    </table>
+    <button type="button" onclick="window.location.href='projectadd'"> Add An Assignment </a>
+    </button>
+    <button type="button" onclick="window.location.href='projectup'"> Update An Assignment </a>
+    </button>
+    <button type="button" onclick="window.location.href='projectde'"> Delete An Assignment </a>
+    </button>
+   
+</body>
+
+</html>

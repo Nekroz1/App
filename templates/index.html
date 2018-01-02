@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>Teacher Management Application</title>
+    
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    
+</head>
+ 
+<body>
+ 
+    <div class="container">
+        <div class="header">
+            
+                    <button type="button" onclick="window.location.href=''"> Home </a>
+                    </button>
+                    <button type="button" onclick="window.location.href='Enter'"> Log In </a>
+                    </button>
+                    <button type="button" onclick="window.location.href='logout'"> Log Out </a>
+                    </button>
+                    <button type="button" onclick="window.location.href='showSignUp'"> Sign Up </a>
+                    </button>
+                
+            <h3 class="text-muted">Python Flask Application</h3>
+        </div>
+        
+     {% if session['logged_in'] %}
+          <button type="button" onclick="window.location.href='students'"> Students </a>
+          </button>
+           <button type="button" onclick="window.location.href='subjects'"> Subjects </a>
+          </button>
+          <button type="button" onclick="window.location.href='projects'"> Assignments </a>
+          </button>
+     {% endif %}
+ 
+        <div class="jumbotron">
+            <h1>Teacher Management App</h1>
+            <p class="lead"></p>
+            <p><a class="btn btn-lg btn-success" href="showSignUp" role="button">Sign up today</a>
+            </p>
+        </div>
+ 
+        <div class="row marketing">
+            <div class="col-lg-6">
+                <h4>Related Information:</h4>
+                <p>By signing up and logging in teachers are allowed to:</p>
+ 
+                <h4>Update-Track Students</h4>
+                <p>The teachers will be able to add, modify or erase students that are stored to the respective database</p>
+ 
+                <h4>Update-Track Subjects</h4>
+                <p>The teachers will be able to add, modify or erase subjects that are stored to the respective database</p>
+                
+                <h4>Create a Project to a Subject </h4>
+                <p>The teachers will be able to add a Project, by giving the respective name and additional information</p>
+            </div>
+ 
+            
+        <footer class="footer">
+            &copy; Created and Developed by Vasileios Kazakos
+        </footer>
+ 
+    </div>
+</body>
+ 
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Python Flask Management App</title>
+ 
+    
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/signup.css') }}">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script>
+	
+	$(function() {
+    $('#btnSignUp').click(function() {
+ 
+        $.ajax({
+            url: '/st_up',
+            data: $('form').serialize(),
+            type: 'POST',
+            success: function(response) {
+                console.log(response);
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    });
+});
+</script>
+  </head>
+ 
+  <body>
+ 
+    <div class="container">
+      <div class="header">
+         <button type="button" onclick="window.location.href='/'"> Home </a>
+                    </button>
+        <h3 class="text-muted">Select a Student From The List And Update Information</h3>
+      </div>
+ 
+      <div class="jumbotron" style="background-color:#01c41b">
+        <h1>Update Catalogue</h1>
+        <form class="form-signin">
+        <label for="inputId" class="sr-only">Id</label>
+        <input type="name" name="inputId" id="inputId" class="form-control" placeholder="Id" required autofocus>
+        <label for="inputUsername" class="sr-only">Username</label>
+        <input type="name" name="inputUsername" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
+        <label for="inputName" class="sr-only">First Name</label>
+        <input type="name" name="inputName" id="inputName" class="form-control" placeholder="Name" required autofocus>
+        <label for="inputSurname" class="sr-only">Surname</label>
+        <input type="name" name="inputSurname" id="inputSurname" class="form-control" placeholder="Surname" required autofocus>
+        <label for="inputRole" class="sr-only">Role</label>
+        <input type="name" name="inputRole" id="inputRole" class="form-control" placeholder="Role" required autofocus>
+        <label for="inputBday" class="sr-only">Birthday</label>
+        <input type="name" name="inputBday" id="inputBday" class="form-control" placeholder="Birthday" required autofocus>
+        <button id="btnSignUp" class="btn btn-lg btn-primary btn-block" type="button" onclick="window.location.href='/' ">Update</button>
+      </form>
+      </div>
+ 
+       
+ 
+      <footer class="footer">
+        <p>&copy; Created by Vasileios Kazakos</p>
+      </footer>
+ 
+    </div>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+body {
+    background-color: #8203bc;
+}
+
+p{
+	color:white;
+	margin:5px;
+}
+
+table,th,tr{
+    border:1px solid black;
+    background-color:white;
+    margin:10px;
+    margin-right:10px;
+    padding:10px;
+}
+
+.b1{
+    position:relative;
+    top:100px;
+}
+
+.footer{
+	color:gold;
+	position:relative;
+	top:200px;
+	left:250px;
+}
+
+.btn-success{
+	background-color:black;
+	color:blue;
+	position:relative;
+	left:450px;
+}
+
+.jumbotron{
+	background-color:#0076ad;
+	color:white;
+    border:1px solid white;
+}
+
+h1{
+	text-align:center;
+}
+h3{
+	text-align:center;
+	border:1px solid black;
+	background-color:red;
+	position:relative;
+	top:5px;
+}
+
+button{
+	background-color:black;
+	color:red;
+	padding-right:100px;
+	
+}
+
+button:hover{
+	background-color:#05ff86;
+	color:#6501a8;
+}
+h4{
+	color:gold;
+	text-decoration:underline;
+}
+
+h5{
+    text-align:center;
+    border:1px solid black;
+    position:relative;
+    top:5px;
+    background-color:#05aec4;
+    color:gold;
+}    

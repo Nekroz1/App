@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Python Flask Management App</title>
+ 
+    
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/signup.css') }}">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script>
+	
+	$(function() {
+    $('#btnSignUp').click(function() {
+ 
+        $.ajax({
+            url: '/su_up',
+            data: $('form').serialize(),
+            type: 'POST',
+            success: function(response) {
+                console.log(response);
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    });
+});
+</script>
+  </head>
+ 
+  <body>
+ 
+    <div class="container">
+      <div class="header">
+         <button type="button" onclick="window.location.href='/'"> Home </a>
+                    </button>
+        <h3 class="text-muted">Select a Subject From The List And Update Information</h3>
+      </div>
+ 
+      <div class="jumbotron"style="background-color:#01c41b">
+        <h1>Update Catalogue</h1>
+        <form class="form-signin">
+        <label for="inputId" class="sr-only"> Subject Id</label>
+        <input type="name" name="inputId" id="inputId" class="form-control" placeholder="Id" required autofocus>
+        <label for="inputCode" class="sr-only">Subject Code</label>
+        <input type="name" name="inputCode" id="inputCode" class="form-control" placeholder="Scode" required autofocus>
+        <label for="inputSubjectname" class="sr-only">Subject Name</label>
+        <input type="name" name="inputSubjectname" id="inputSubjectname" class="form-control" placeholder="Subjectname" required>
+        <label for="inputDes" class="sr-only">Description</label>
+        <input type="name" name="inputDes" id="inputDes" class="form-control" placeholder="Description" required autofocus>
+        <button id="btnSignUp" class="btn btn-lg btn-primary btn-block" type="button" onclick="window.location.href='/' ">Update</button>
+      </form>
+      </div>
+ 
+       
+ 
+      <footer class="footer">
+        <p>&copy; Created by Vasileios Kazakos</p>
+      </footer>
+ 
+    </div>
+  </body>
+</html>
